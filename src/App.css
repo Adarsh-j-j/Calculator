@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container{
+    border: 1px solid #00000038;
+    min-width: 25vw;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 2px 3px 5px #5553532a;
 }
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4); */
+    grid-auto-rows: minmax(60px, auto);
+    /* grid-auto-rows: minmax(70px, 60px); */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/* .numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+#result{
+    grid-column: 4;
+    grid-row: 2/6;
+    background-color: #3071e9de;
+    border-color: #3071e9de;
+    color: #fff;
+    font-size: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+    margin: 5px;
+    border: 1px solid #00000038;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 2px;
+}
+button:hover{
+    background-color: black;
+    color: #fff;
+    border: none;
+}
+.display-cntr{
+    border: 1px solid #00000038;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    margin: 5px 5px 10px;
+}
+input{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.white{
+    background-color: #fff;
 }
